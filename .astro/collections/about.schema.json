@@ -7,12 +7,7 @@
       "type": "string",
       "enum": [
         "",
-        "zh",
-        "en",
-        "es",
-        "ja",
-        "ru",
-        "zh-tw"
+        "ru"
       ]
     },
     "$schema": {

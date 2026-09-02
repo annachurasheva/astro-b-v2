@@ -4,17 +4,17 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Retypeset',
+    title: 'Мемориал Корпечь, Крым (Korpech Memorial, Crimea)',
     // site subtitle
-    subtitle: 'Revive the beauty of typography',
+    subtitle: '',
     // site description
-    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
+    description: 'Мемориал Корпечь — восстановление связей: боец → документ → потомок. Цифровая память о погибших воинах.',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
-    i18nTitle: true, // true | false
+    i18nTitle: false, // true | false
     // author name
-    author: 'radishzz',
+    author: 'Anna Churasheva',
     // site url
-    url: 'https://retypeset.radishzz.cc',
+    url: 'https://astro-blog.edgeone.dev',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
@@ -58,10 +58,10 @@ export const themeConfig: ThemeConfig = {
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   global: {
     // default language
-    locale: 'zh', // de | en | es | fr | ja | ko | pl | pt | ru | zh | zh-tw
+    locale: 'ru', // de | en | es | fr | ja | ko | pl | pt | ru | zh | zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: [], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // post font style
     fontStyle: 'sans', // sans | serif
     // post date format
@@ -91,28 +91,6 @@ export const themeConfig: ThemeConfig = {
       reactionsEnabled: '1',
       emitMetadata: '0',
       inputPosition: 'bottom',
-    },
-    // twikoo
-    // https://twikoo.js.org/
-    twikoo: {
-      envId: '',
-      // version: frontend version can be changed in package.json
-    },
-    // waline
-    // https://waline.js.org/en/
-    waline: {
-      // server url
-      serverURL: 'https://retypeset-comment.radishzz.cc',
-      // emoji url
-      emoji: [
-        'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
-        // 'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
-        // more emojis: https://waline.js.org/en/guide/features/emoji.html
-      ],
-      // gif search
-      search: false, // true | false
-      // image uploader
-      imageUploader: false, // true | false
     },
   },
   // COMMENT SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
@@ -167,16 +145,16 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/radishzzz/astro-theme-retypeset',
+        url: 'https://github.com/annachurasheva/astro-b-v2',
       },
       {
         name: 'Email',
-        url: 'email@radishzz.cc',
+        url: 'mailto:anna.churasheva@gmail.com',
       },
-      // {
-      //   name: 'X',
-      //   url: 'https://x.com/radishzz_',
-      // },
+      {
+        name: 'Email (Yandex)',
+        url: 'mailto:79787883649@ya.ru',
+      },
     ],
     // year of website start
     startYear: 2025,

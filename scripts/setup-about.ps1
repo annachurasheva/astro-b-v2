@@ -1,3 +1,27 @@
+# Скрипт для обновления about-страницы
+# Использование: .\scripts\setup-about.ps1
+
+$ErrorActionPreference = "Stop"
+
+Write-Host "=== Обновление about-страницы ===" -ForegroundColor Cyan
+
+# Путь к директории about
+$AboutDir = "src\content\about"
+
+# Создаём директорию если не существует
+if (-not (Test-Path $AboutDir)) {
+    Write-Host "Создание директории $AboutDir..." -ForegroundColor Yellow
+    New-Item -ItemType Directory -Force $AboutDir | Out-Null
+    Write-Host "✓ Директория создана" -ForegroundColor Green
+}
+
+# Удаляем все существующие файлы about
+Write-Host "Удаление старых файлов about..." -ForegroundColor Yellow
+Get-ChildItem -Path $AboutDir -Filter "about-*.md" | Remove-Item -Force
+Write-Host "✓ Старые файлы удалены" -ForegroundColor Green
+
+# Создаём новый файл about-ru.md
+$aboutContent = @'
 ---
 lang: ru
 ---
@@ -30,3 +54,12 @@ lang: ru
 - Образец формы — n52a.de/memorial/niesky/list (триада разделов, строгая таблица, доверие = данные + согласование с Минобороны)
 
 **Расширение Context VK.RU** (репо alex-6675/context-vkru) — удочка контакта через соцсети; приоритет: mem-2026 первый.
+'@
+
+Write-Host "Создание about-ru.md..." -ForegroundColor Yellow
+$aboutContent | Out-File -FilePath "$AboutDir\about-ru.md" -Encoding UTF8
+Write-Host "✓ about-ru.md создан" -ForegroundColor Green
+
+Write-Host "`n=== Результат ===" -ForegroundColor Cyan
+Write-Host "Файл about-ru.md обновлён с информацией о проекте Мемориал Корпечь" -ForegroundColor White
+Write-Host "`nГотово!" -ForegroundColor Green
